@@ -1,4 +1,4 @@
-= pin_up_receipts
+# pin_up_receipts
 
 Generate HTML receipts from your Pin charges.
 
@@ -53,7 +53,7 @@ If you would like you can use a custom receipt template to suit your branding or
 
   * Flesh out receipts - handle failed transactions and refunds
 
-== Contributing to pin_up_receipts
+## Contributing to pin_up_receipts
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
@@ -63,7 +63,7 @@ If you would like you can use a custom receipt template to suit your branding or
 * Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
 * Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+## Copyright
 
 Copyright (c) 2013 Daniel Nitsikopoulos. See LICENSE.txt for
 further details.
