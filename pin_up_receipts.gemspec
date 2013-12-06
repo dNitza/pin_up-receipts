@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.email = "dnitza@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     ".document",
@@ -33,13 +33,14 @@ Gem::Specification.new do |s|
     "Gemfile.lock",
     "Guardfile",
     "LICENSE.txt",
-    "README.rdoc",
+    "README.md",
     "Rakefile",
     "VERSION",
     "lib/pin_up_receipts.rb",
     "lib/pin_up_receipts/base.rb",
     "lib/pin_up_receipts/errors.rb",
     "lib/pin_up_receipts/receipt.rb",
+    "pin_up_receipts.gemspec",
     "spec/base_spec.rb",
     "spec/receipt_spec.rb",
     "spec/spec_helper.rb",
