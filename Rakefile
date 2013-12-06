@@ -17,11 +17,14 @@ Jeweler::Tasks.new do |gem|
   gem.name = "pin_up_receipts"
   gem.homepage = "http://github.com/dNitza/pin_up_receipts"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{A receipts addon for pin_up}
+  gem.description = %Q{A receipts addon for pin_up}
   gem.email = "dnitza@gmail.com"
   gem.authors = ["Daniel Nitsikopoulos"]
   # dependencies defined in Gemfile
+  gem.files.exclude(Dir.glob('spec/vcr/*.yml'))
+  gem.add_dependency "httparty"
+  gem.add_dependency "pin_up"  
 end
 Jeweler::RubygemsDotOrgTasks.new
 
@@ -32,14 +35,6 @@ Rake::TestTask.new(:test) do |test|
   test.verbose = true
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
-
 task :default => :test
 
 require 'rdoc/task'
@@ -47,7 +42,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "pin_up_receipts #{version}"
+  rdoc.title = "pin_up #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
