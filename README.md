@@ -49,6 +49,10 @@ If you would like a PDF receipt, you should be able to "print as PDF" from a bro
 
 If you would like you can use a custom receipt template to suit your branding or design needs. To get an idea of which variables are available, take a look at  `/views/receit.html.erb`
 
+## To do
+
+  * Flesh out receipts - handle failed transactions and refunds
+
 == Contributing to pin_up_receipts
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
