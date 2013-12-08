@@ -1,9 +1,13 @@
 # encoding: utf-8
-module PinUpReceipts
+module Pin
   ##
   # This class lets you generate and save receipts from a Pin::Charge.
-  class Receipt < PinUpReceipts::Base
+  class Receipt < Pin::Base
+    # include Pin
 
+    def self.root
+      File.expand_path '../../..', __FILE__
+    end
     ##
     # Create a new PinUpReceipts::Receipt instance
     # Args:

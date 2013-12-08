@@ -1,12 +1,12 @@
 # encoding: utf-8
 require 'spec_helper'
 
-describe "Receipt", :vcr, class: PinUpReceipts::Receipt do
+describe "Receipt", :vcr, class: Pin::Receipt do
   before(:each) do
     Pin::Base.new(ENV["PIN_SECRET"], :test)
     @charge = Pin::Charges.find("ch_0kdOMXP7gG0_W_Vh8qAWdA")
     @company_details = ["ABC Widgets", "123 Fake Street Melbourne","VIC 3000", "ABN: 12 345 678 910"]
-    @receipt = PinUpReceipts::Receipt.new(@charge, @company_details)
+    @receipt = Pin::Receipt.new(@charge, @company_details)
   end
 
   it "should generate an HTML receipt  given a charge" do
@@ -30,7 +30,7 @@ describe "Receipt", :vcr, class: PinUpReceipts::Receipt do
     payment_options["tax"] = {"name" => "GST", "amount" => "$10.00"}
     payment_options["discount"] = {"name" => "Member Discount", "amount" => "$10.00"}
 
-    @detailed_receipt = PinUpReceipts::Receipt.new(@charge, @company_details, nil, payment_options)
+    @detailed_receipt = Pin::Receipt.new(@charge, @company_details, nil, payment_options)
     expect @detailed_receipt.render().should include("GST")
   end
 

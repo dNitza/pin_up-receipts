@@ -1,7 +1,7 @@
-module PinUpReceipts
+module Pin
   ##
   # This class sets up a few things like the base URL and provides a few utility methods to be shared between classes.
-  class Base
+  class ReceiptBase
     include HTTParty
     include Pin
 

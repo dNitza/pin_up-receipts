@@ -6,7 +6,7 @@ describe "Base", :vcr, class: Pin::Base do
   end
 
   it "should set the root view path correctly" do
-    PinUpReceipts::Base.root.should eq File.expand_path '../..', __FILE__
+    Pin::Receipt.root.should eq File.expand_path '../..', __FILE__
   end
 
 end
