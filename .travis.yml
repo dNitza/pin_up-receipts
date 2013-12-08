@@ -1,8 +1,4 @@
----
 env:
   global:
-    secure: |-
-      Z7eqtE7oQVsmz2iw45MULCsk9Ff028nsPHJjX04GskTCeqhn2AgeFbNEjB7d
-      1mlrJDZyRggBW2ENK6Kti7p196hB1WfH52SYl9dZSLABWDW9oIKo46HjymNP
-      J9RERcoevctKkRGUCvyx0kvX1uN4iI56OJPXFAsYA+w0zAm/1/c=
+  - secure: REYJc++SiMXXGMjP3UwU5NmbU2MCx+SkPcp9r/57u4l2D60E3yu/vqj9kJ9zbB5A32zzS5hmk6H6Scr3F/58JfA3N7WOkg501J/eWLsHChXW5Y+SAnIFDNKDgwTgflxfpmMZhJocTtB27XaCO9kQm1cSdAqgVA7aDPN2dt1hN6w=
 script: bundle exec rspec spec
